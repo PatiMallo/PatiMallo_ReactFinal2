@@ -1,58 +1,58 @@
-/* Contenedor principal de la lista */
+
 .item-list {
-  display: flex; /* Configura Flexbox para organizar las tarjetas */
-  flex-wrap: wrap; /* Permitir que las tarjetas se ajusten a varias filas si no hay espacio */
-  gap: 2rem; /* Espaciado entre las tarjetas */
-  justify-content: space-evenly; /* Distribuye uniformemente las tarjetas */
-  align-items: flex-start; /* Alinea las tarjetas en la parte superior */
-  padding: 2rem; /* Espaciado interno del contenedor */
-  max-width: 1200px; /* Ancho máximo del contenedor */
-  width: 100%; /* Usa todo el ancho disponible */
-  margin: 0 auto; /* Centrar horizontalmente el contenedor */
-  box-sizing: border-box; /* Asegurar que padding y bordes se incluyan en el cálculo del tamaño */
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 2rem; 
+  justify-content: space-evenly; 
+  align-items: flex-start; 
+  padding: 2rem; 
+  max-width: 1200px;
+  width: 100%; 
+  margin: 0 auto; 
+  box-sizing: border-box; 
 }
 
-/* Tarjetas individuales */
+
 .item-card {
-  flex: 1 1 calc(25% - 2rem); /* Cada tarjeta ocupa el 25% menos el espacio de gap */
-  max-width: 300px; /* Limitar el ancho máximo de las tarjetas */
-  min-width: 250px; /* Tamaño mínimo para pantallas más pequeñas */
-  background-color: white; /* Fondo blanco */
-  border: 1px solid #ddd; /* Borde claro */
-  border-radius: 10px; /* Bordes redondeados */
-  padding: 1rem; /* Espaciado interno */
-  text-align: center; /* Centrar el contenido */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suavizar transformaciones */
+  flex: 1 1 calc(25% - 2rem); 
+  max-width: 300px; 
+  min-width: 250px;
+  background-color: white; 
+  border: 1px solid #ddd; 
+  border-radius: 10px; 
+  padding: 1rem; 
+  text-align: center; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .item-card:hover {
-  transform: scale(1.05); /* Efecto de ampliación */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  transform: scale(1.05); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
 }
 
-/* Imagen dentro de las tarjetas */
+
 .item-image {
-  max-width: 100%; /* Ajusta el ancho de la imagen al tamaño de la tarjeta */
-  height: auto; /* Mantén la proporción de la imagen */
-  border-radius: 10px; /* Bordes redondeados */
-  margin-bottom: 1rem; /* Espaciado inferior */
+  max-width: 100%; 
+  height: auto; 
+  border-radius: 10px; 
+  margin-bottom: 1rem; 
 }
 
-/* Botón para agregar al carrito */
+
 .add-to-cart-button {
-  background-color: #007bff; /* Fondo azul */
-  color: white; /* Texto blanco */
-  padding: 0.75rem 1.5rem; /* Espaciado interno */
-  border: none; /* Sin borde */
-  border-radius: 5px; /* Botón redondeado */
-  font-size: 1rem; /* Tamaño del texto */
-  cursor: pointer; /* Cambiar cursor al pasar el mouse */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Animaciones suaves */
+  background-color: #007bff; 
+  color: white; 
+  padding: 0.75rem 1.5rem; 
+  border: none; 
+  border-radius: 5px; 
+  font-size: 1rem; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease, transform 0.3s ease; 
 }
 
 .add-to-cart-button:hover {
-  background-color: #0056b3; /* Fondo más oscuro */
-  transform: translateY(-2px); /* Efecto de elevación */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra adicional */
+  background-color: #0056b3; 
+  transform: translateY(-2px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
