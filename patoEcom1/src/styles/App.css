@@ -1,0 +1,7 @@
+/* App.css */
+@import './Global.css';
+@import './NavBar.css';
+@import './ItemList.css';
+@import './ItemDetail.css';
+@import './Cart.css';
+@import './Footer.css';

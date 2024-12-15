@@ -1,0 +1,24 @@
+/* CartWidget.css */
+
+.cart-widget {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .cart-widget img {
+    width: 30px;
+    height: auto;
+  }
+  
+  .cart-widget .cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: var(--danger-color);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  

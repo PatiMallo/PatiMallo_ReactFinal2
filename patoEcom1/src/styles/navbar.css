@@ -1,0 +1,41 @@
+/* NavBar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--box-shadow);
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.navbar .menu {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .menu a {
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+}
+
+.navbar .menu a:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+.navbar .cart-widget img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
