@@ -1,10 +1,10 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import CartWidget from "./CartWidget"; // Ícono del carrito
+import CartWidget from "./CartWidget"; 
 import "../styles/navbar.css";
 
 const NavBar = () => {
-  const navigate = useNavigate(); // Hook para redirigir
+  const navigate = useNavigate(); 
 
   return (
     <nav className="navbar">

@@ -1,7 +1,7 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { CartContext } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
-import "../styles/checkout.css"; // Asegúrate de crear este archivo de estilos
+import "../styles/checkout.css";
 
 const CheckOut = () => {
   const { cart, totalItems, totalPrice, removeFromCart, clearCart } = useContext(CartContext);
@@ -24,34 +24,38 @@ const CheckOut = () => {
     clearCart();
   };
 
-  const renderOrderConfirmation = () => (
-    <div className="checkout-confirmation">
-      <h2>¡Gracias por tu compra!</h2>
-      <p>Tu pedido ha sido procesado exitosamente.</p>
-      <button className="button-primary" onClick={() => navigate("/")}>
-        Volver al Inicio
-      </button>
-    </div>
-  );
+  if (orderConfirmed) {
+    return (
+      <div className="checkout-confirmation">
+        <h2>¡Gracias por tu compra!</h2>
+        <p>Tu pedido ha sido procesado exitosamente.</p>
+        <button onClick={() => navigate("/")} className="button-primary">
+          Volver al Inicio
+        </button>
+      </div>
+    );
+  }
 
-  const renderEmptyCart = () => (
-    <div className="checkout-empty">
-      <h2>No hay productos en tu carrito</h2>
-      <button className="button-primary" onClick={() => navigate("/")}>
-        Volver a la tienda
-      </button>
-    </div>
-  );
+  if (!cart || cart.length === 0) {
+    return (
+      <div className="checkout-empty">
+        <h2>No hay productos en tu carrito</h2>
+        <button onClick={() => navigate("/")} className="button-primary">
+          Volver a la tienda
+        </button>
+      </div>
+    );
+  }
 
-  const renderCartDetails = () => (
-    <div className="checkout-details">
+  return (
+    <div className="checkout">
       <h2>Carrito de Compras</h2>
       <ul className="cart-list">
         {cart.map((item) => (
           <li key={item.id} className="cart-item">
             <div className="cart-item-info">
               <img
-                src={item.image || "https://via.placeholder.com/150"}
+                src={item.imageid || "https://via.placeholder.com/150"}
                 alt={item.articulo}
                 className="cart-item-image"
               />
@@ -62,7 +66,7 @@ const CheckOut = () => {
                 <p>Total: ${item.precio * item.cantidad}</p>
               </div>
             </div>
-            <button className="button-secondary" onClick={() => removeFromCart(item.id)}>
+            <button onClick={() => removeFromCart(item.id)} className="button-secondary">
               Eliminar
             </button>
           </li>
@@ -73,7 +77,6 @@ const CheckOut = () => {
         <p><strong>Total a Pagar:</strong> ${totalPrice}</p>
       </div>
 
-      <h3>Datos del Cliente</h3>
       <form onSubmit={handleSubmit} className="checkout-form">
         <div className="form-group">
           <label htmlFor="name">Nombre:</label>
@@ -117,10 +120,6 @@ const CheckOut = () => {
       </button>
     </div>
   );
-
-  if (orderConfirmed) return renderOrderConfirmation();
-  if (cart.length === 0) return renderEmptyCart();
-  return renderCartDetails();
 };
 
 export default CheckOut;

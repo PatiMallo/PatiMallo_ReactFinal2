@@ -3,13 +3,13 @@
   line-height: 1.5;
   font-weight: 400;
 
-  /* Variables de color */
-  --dark-text-color: rgba(7, 7, 7, 0.87); /* Texto blanco para fondos oscuros */
-  --light-text-color: #212529; /* Texto oscuro para fondos claros */
-  --background-dark: #242424; /* Fondo oscuro */
-  --background-light: #ffffff; /* Fondo claro */
+  
+  --dark-text-color: rgba(7, 7, 7, 0.87); 
+  --light-text-color: #212529; 
+  --background-dark: #242424; 
+  --background-light: #ffffff; 
 
-  /* Variables adicionales */
+  
   color-scheme: light dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,7 +17,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Estilo para todo el sitio */
+
 body {
   margin: 0;
   display: flex;
@@ -25,11 +25,11 @@ body {
   min-width: 320px;
   min-height: 100vh;
 
-  background-color: var(--background-dark); /* Fondo oscuro por defecto */
-  color: var(--dark-text-color); /* Texto blanco por defecto */
+  background-color: var(--background-dark); 
+  color: var(--dark-text-color); 
 }
 
-/* Reglas para enlaces */
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -39,13 +39,13 @@ a:hover {
   color: #535bf2;
 }
 
-/* Encabezados */
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
-/* Botones */
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -53,8 +53,8 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a; /* Fondo oscuro */
-  color: var(--dark-text-color); /* Texto blanco */
+  background-color: #1a1a1a; 
+  color: var(--dark-text-color); 
   cursor: pointer;
   transition: border-color 0.25s, background-color 0.25s;
 }
@@ -67,11 +67,11 @@ button:focus-visible {
 }
 
 
-/* Para esquemas de color claros (modo claro) */
+
 @media (prefers-color-scheme: light) {
   :root {
-    color: var(--light-text-color); /* Texto oscuro */
-    background-color: var(--background-light); /* Fondo claro */
+    color: var(--light-text-color); 
+    background-color: var(--background-light); 
   }
 
   a:hover {
@@ -79,7 +79,7 @@ button:focus-visible {
   }
 
   button {
-    background-color: #f9f9f9; /* Fondo claro */
-    color: var(--light-text-color); /* Texto oscuro */
+    background-color: #f9f9f9;  
+    color: var(--light-text-color); 
   }
 }
